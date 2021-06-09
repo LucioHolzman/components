@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./input.css";
-const Question = ({nameLabel = 'Default', typeValue= 'text', colorLabel = '#fff', colorInput = '#fff'}) => {
+const Input = ({nameLabel = 'Default', typeValue= 'text', colorLabel = '#fff', colorInput = '#fff'}) => {
 
   const [comparison, setComparison] = useState(false);
   const inputValueUpdate = e => e.target.value !== "" ? setComparison(true) : setComparison(false);
@@ -28,4 +28,4 @@ const Question = ({nameLabel = 'Default', typeValue= 'text', colorLabel = '#fff'
   );
 };
 
-export default Question;
+export default Input;
