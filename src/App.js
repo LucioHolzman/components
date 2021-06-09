@@ -4,8 +4,10 @@ const App = () => {
   return (
     <>
       <Input
-        nameLabel='Me vuelvo lockeer'
+        nameLabel='Algo no default'
         typeValue='number'
+        colorLabel='#ffffff'
+        colorInput='#ffffff'
       />
     </>
   );

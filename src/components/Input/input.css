@@ -1,7 +1,6 @@
 .container-input {
     position: relative;
     margin-bottom: 20px;
-    background-color: aquamarine;
 }
 
 .active-input {
@@ -27,7 +26,5 @@
     z-index: 1;
     background-color: transparent;
     border: none;
-    border-bottom: 1px solid white;
-    color: white;
 }
 

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./input.css";
-const Question = ({nameLabel = 'Default', typeValue= 'text'}) => {
+const Question = ({nameLabel = 'Default', typeValue= 'text', colorLabel = '#fff', colorInput = '#fff'}) => {
 
   const [comparison, setComparison] = useState(false);
   const inputValueUpdate = e => e.target.value !== "" ? setComparison(true) : setComparison(false);
@@ -8,7 +8,11 @@ const Question = ({nameLabel = 'Default', typeValue= 'text'}) => {
   return (
     <>
         <div className="container-input">
-          <label htmlFor="" className={`label ${comparison?'active-input':'off-input'}`}>
+          <label 
+          htmlFor="" 
+          className={`label ${comparison?'active-input':'off-input'}`}
+          style={{color: colorLabel}}
+          >
             {nameLabel}
           </label>
           <input
@@ -17,6 +21,7 @@ const Question = ({nameLabel = 'Default', typeValue= 'text'}) => {
             onChange={inputValueUpdate}
             onFocus={() => {setComparison(true)}}
             onBlur={inputValueUpdate}
+            style={{color: colorInput, borderBottom:`1px solid ${colorInput}`}}
           />
         </div>
     </>
